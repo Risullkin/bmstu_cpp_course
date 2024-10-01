@@ -38,6 +38,6 @@ int otvet(const char *str) {
     return result * sign;
 }
 int main(void){
-    printf("%d", otvet("235"));
+    assert(otvet("    10") == 10);
     return 0;
 }
