@@ -485,7 +485,9 @@ TEST(SimpleVector, Concat)
 {
 	using namespace bmstu;
 	simple_vector<int> vec{1, 2, 3, 4};
-	vec.concat(simple_vector<int>{5, 6}).concat(simple_vector<int>{7, 8}).concat(simple_vector<int>{9, 10});
+	vec.concat(simple_vector<int>{5, 6})
+		.concat(simple_vector<int>{7, 8})
+		.concat(simple_vector<int>{9, 10});
 	auto sv1 = simple_vector<int>{1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 	ASSERT_EQ(vec, sv1);
 }
