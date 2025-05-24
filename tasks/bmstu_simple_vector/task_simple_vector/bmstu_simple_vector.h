@@ -164,6 +164,7 @@ class simple_vector
 
 	simple_vector& operator=(const simple_vector& other)
 	{
+		std::cout << "=\n";
 		if (this != &other)
 		{
 			simple_vector tmp(other);
