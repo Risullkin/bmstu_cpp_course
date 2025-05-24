@@ -1,3 +1,4 @@
+#include <iostream>
 #include <ostream>
 #include <stdexcept>
 #include <utility>
@@ -136,9 +137,15 @@ class simple_vector
 		pointer ptr_ = nullptr;
 	};
 
-	simple_vector() noexcept = default;
+	simple_vector()
+	{
+		std::cout << "simple_vector contruct at (" << this << ")\n";
+	}
 
-	~simple_vector() = default;
+	~simple_vector()
+	{
+		std::cout << "simple_vector destruct at (" << this << ")\n";
+	}
 
 	simple_vector(std::initializer_list<T> init) noexcept
 		: data_(init.size()), size_(init.size()), capacity_(init.size())
@@ -149,6 +156,7 @@ class simple_vector
 	simple_vector(const simple_vector& other)
 		: data_(other.size_), size_(other.size_), capacity_(other.size_)
 	{
+		std::cout << "construct_copy (" << this << ")\n";
 		std::copy(other.data_.get(), other.data_.get() + size_, data_.get());
 	}
 
@@ -207,8 +215,9 @@ class simple_vector
 
 	size_t capacity() const noexcept { return capacity_; }
 
-	void swap(simple_vector& other) noexcept
+	void swap(simple_vector& other) noexcept  //
 	{
+		std::cout << "swap\n";
 		data_.swap(other.data_);
 		std::swap(size_, other.size_);
 		std::swap(capacity_, other.capacity_);
