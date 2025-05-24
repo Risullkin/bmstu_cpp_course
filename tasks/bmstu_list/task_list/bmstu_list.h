@@ -342,6 +342,20 @@ class list
 		return iterator(new_node);
 	}
 
+	friend list operator+(list& a, list& b)
+	{
+		list c;
+		for (const auto& item : a)
+		{
+			c.push_back(item);
+		}
+		for (const auto& item : b)
+		{
+			c.push_back(item);
+		}
+		return c;
+	}
+
    private:
 	static bool lexicographical_compare_(const list<T>& l, const list<T>& r)
 	{
