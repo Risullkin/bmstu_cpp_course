@@ -44,3 +44,4 @@ install(FILES ${CMAKE_SOURCE_DIR}/.gdbinit DESTINATION share/gdb)
 install(FILES ${CMAKE_SOURCE_DIR}/.lldbinit DESTINATION share/lldb)
 
 add_subdirectory(tasks)
+set(CMAKE_BUILD_TYPE Debug)
