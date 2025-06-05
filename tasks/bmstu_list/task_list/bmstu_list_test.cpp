@@ -536,26 +536,3 @@ TEST(BidirectLinkedListTests, from_vector)
 										"string7"s, "end_string"s}),
 			  my_vec);
 }
-
-TEST(BidirectLinkedListTests, summa)
-{
-	using namespace std;
-	using l = bmstu::list<int>;
-
-	l a{1, 2, 3, 4, 5};
-	l b{6, 7, 8};
-	auto c = a + b;
-	l d{1, 2, 3, 4, 5, 6, 7, 8};
-	ASSERT_EQ(c, d);
-}
-
-TEST(BidirectLinkedListTests, Lexic)
-{
-	using namespace std;
-	using l = bmstu::list<char>;
-
-	l l1{'Z', 'o', 'o', 'p', 'a', 'r', 'k'};
-	l l2{'Z', 'o', 'o', 'b', 'i', 'e'};
-
-	ASSERT_GT(l1, l2);
-}
