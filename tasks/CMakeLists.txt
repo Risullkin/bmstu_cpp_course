@@ -1,3 +1,6 @@
 add_subdirectory(task_basic_c)
 add_subdirectory(bmstu_string)
 add_subdirectory(bmstu_lets)
+add_subdirectory(bmstu_simple_vector)
+add_subdirectory(bmstu_abstract_iterator)
+add_subdirectory(bmstu_list)
