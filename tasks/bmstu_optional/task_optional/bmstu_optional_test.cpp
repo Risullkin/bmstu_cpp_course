@@ -782,3 +782,15 @@ TEST(Optional, ExceptionWithTrackedObject)
 	ASSERT_EQ(Tracker::param_ctor, 1);
 	ASSERT_EQ(Tracker::dtor, 1);
 }
+
+// struct DummyIdiot {
+// 	DummyIdiot() { std::cout << "1/n"; }
+// 	~DummyIdiot() { std::cout << "1/n"; }
+// };
+
+// TEST(DUMMY, TEST1) {
+// 	uint8_t staticData[sizeof(DummyIdiot)];
+// 	uint8_t* dynamicData = new u_int8_t[sizeof(DummyIdiot)];
+// 	std::cout << (void*)&staticData[0] <<std::endl;
+// 	std::cout << (void*)dynamicData <<std::endl;
+// }
