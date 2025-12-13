@@ -51,7 +51,6 @@ class optional
 		}
 	}
 
-<<<<<<< HEAD
 	optional& operator=(const T& value)
 	{
 		if (is_initialized_)
@@ -128,15 +127,6 @@ class optional
 		}
 		return *this;
 	}
-=======
-	optional& operator=(const T& value) { return *this; }
-
-	optional& operator=(T&& value) { return *this; }
-
-	optional& operator=(const optional& value) { return *this; }
-
-	optional& operator=(optional&& value) { return *this; }
->>>>>>> 66053914fa4dd7d913b4bdd6ecfd9e1959dc4c09
 
 	T& operator*() &
 	{
